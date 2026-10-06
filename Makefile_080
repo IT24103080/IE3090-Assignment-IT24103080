@@ -1,0 +1,13 @@
+CC      = gcc
+CFLAGS  = -Wall -pthread
+
+all: agent_080 controller_080
+
+agent_080: agent_080.c
+	$(CC) $(CFLAGS) -o agent_080 agent_080.c
+
+controller_080: controller_080.c
+	$(CC) $(CFLAGS) -o controller_080 controller_080.c
+
+clean:
+	rm -f agent_080 controller_080
